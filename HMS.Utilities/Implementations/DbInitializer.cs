@@ -10,6 +10,6 @@ public class DbInitializer : IDbInitializer
 {
     public void Initialize()
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
     }
 }

@@ -1,5 +1,5 @@
 ﻿namespace HMS.Models;
-internal class LabTest
+public class LabTest
 {
     public int Id { get; set; }
     public string TestType { get; set; }

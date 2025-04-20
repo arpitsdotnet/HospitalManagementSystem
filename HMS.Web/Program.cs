@@ -19,6 +19,8 @@ var builder = WebApplication.CreateBuilder(args);
 
     builder.Services.AddScoped<IDbInitializer, DbInitializer>();
     builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+    //builder.Services.AddScoped<IEmailSender, DefailtEmailSender>();
+
     builder.Services.AddRazorPages();
 }
 
@@ -46,7 +48,7 @@ var app = builder.Build();
 
     app.MapControllerRoute(
         name: "default",
-        pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+        pattern: "{area=Patient}/{controller=Home}/{action=Index}/{id?}");
 
     app.Run();
 }
