@@ -8,6 +8,10 @@ using Microsoft.EntityFrameworkCore;
 namespace HMS.Repositories;
 public class ApplicationDbContext : DbContext
 {
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+    {
+    }
+
     protected ApplicationDbContext()
     {
     }
