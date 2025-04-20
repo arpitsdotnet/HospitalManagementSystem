@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HMS.Repositories\HMS.Repositories.csproj" />
+    <ProjectReference Include="..\HMS.Utilities\HMS.Utilities.csproj" />
+    <ProjectReference Include="..\HMS.ViewModels\HMS.ViewModels.csproj" />
+  </ItemGroup>
+
 </Project>
