@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
 namespace HMS.Models;
 public class ApplicationUser : IdentityUser
@@ -10,7 +11,9 @@ public class ApplicationUser : IdentityUser
     public DateTime DOB { get; set; }
     public string Specialist { get; set; }
     public Department Department { get; set; }
+    [NotMapped]
     public ICollection<Appointment> Appointments { get; set; }
+    [NotMapped]
     public ICollection<Payroll> Payrolls { get; set; }
 
 }
